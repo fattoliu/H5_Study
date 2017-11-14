@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>105-背景绘制区域属性</title>
+    <title>104-背景图片定位区域属性</title>
     <style>
         * {
             margin: 0;
@@ -19,29 +19,26 @@
             border: 20px dashed blueviolet;
             padding: 50px;
             margin-left: 20px;
-            background: orange url("images/bg_test.png") no-repeat;
+            background: url("../images/bg_test.png") no-repeat;
         }
 
-        /*背景颜色默认从 border 开始绘制 */
-
-
-
-
         ul li:nth-child(2) {
-            /*背景绘制区域属性是专门用于指定从哪个区域开始绘制背景颜色的，默认情况下会从 border 开始绘制，此处指定从 padding 区域开始*/
-            background-clip: padding-box;
+            /*背景图片从 padding 区域开始绘制，默认也是从 padding 开始*/
+            background-origin: padding-box;
         }
 
         ul li:nth-child(3) {
-            /*背景从 border 区域开始绘制*/
-            background-clip: border-box;
+            /*背景图片从 border 区域开始绘制*/
+            background-origin: border-box;
 
         }
 
         ul li:nth-child(4) {
-            /*背景从 元素内容content （即元素的宽高）区域开始绘制*/
-            background-clip: content-box;
+            /*背景图片从 元素内容content （即元素的宽高）区域开始绘制*/
+            background-origin: content-box;
         }
+
+
     </style>
 </head>
 <body>
