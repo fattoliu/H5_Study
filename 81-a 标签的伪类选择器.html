@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a 标签的伪类选择器</title>
+    <style>
+        a:link {
+            color:skyblue;
+        }
+        a:visited {
+            color:yellow;
+        }
+        a:active {
+            color: orange;
+        }
+        a:hover {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--
+    a标签的伪类选择器是专门用来修改 a 标签不同状态的的样式的
+    :link 修改从未被访问过状态下的样式
+    :visited 修改被访问过状态下的样式
+    :active  修改鼠标长按状态下的样式
+    :hover  修改鼠标悬停状态下的样式
+
+-->
+<a href="http://www.taobao.com">淘宝</a>
+<a href="http://www.jingdong.com">京东</a>
+</body>
+</html>

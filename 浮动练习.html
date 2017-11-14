@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+    <style>
+        /*代码摘自 YUI CSS RESET*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            background-color: powderblue;
+            color:#505050;
+        }
+        .header {
+            width: 980px;
+            height: 110px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header .logo {
+            width: 250px;
+            height: 110px;
+            background-color: pink;
+            float: left;
+        }
+
+        .header .language {
+            width: 150px;
+            height: 50px;
+            background-color: skyblue;
+            float: right;
+        }
+
+        .header .nav {
+            width: 650px;
+            height: 50px;
+            background-color: purple;
+            margin-top: 10px;
+            float: right;
+        }
+
+        .content {
+            width: 980px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
+
+        }
+
+        .content .con_left {
+            width: 320px;
+            height: 400px;
+            background-color: yellow;
+            float: left;
+        }
+
+        .content .con_right {
+            width: 650px;
+            height: 400px;
+            float: right;
+        }
+
+        .content .con_right .top {
+            width: 650px;
+            height: 350px;
+        }
+
+        .content .con_right .top .topleft {
+            width: 400px;
+            float: left;
+            height: 350px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .content .con_right .top .topleft .news1 {
+            width: 400px;
+            float: left;
+            height: 200px;
+            background-color: limegreen;
+        }
+
+        .content .con_right .top .topleft .news2 {
+            width: 400px;
+            height: 140px;
+            float: left;
+            margin-top: 10px;
+            background-color: salmon;
+        }
+
+        .content .con_right .top .topright {
+            width: 240px;
+            height: 350px;
+            background-color: lightsteelblue;
+            float: right;
+        }
+
+        .content .con_right .bottom {
+            width: 650px;
+            height: 40px;
+            background-color: lightseagreen;
+            margin-top: 10px;
+        }
+
+        .footer {
+            width: 980px;
+            height: 40px;
+            background-color: tomato;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-align: center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">250*110</div>
+    <div class="language">150*50</div>
+    <div class="nav">650*50</div>
+
+</div>
+
+<div class="content">
+    <div class="con_left">320*400</div>
+    <div class="con_right">
+        <div class="top">
+            <div class="topleft">
+                <div class="news1">400*200</div>
+                <div class="news2">400*140</div>
+            </div>
+            <div class="topright">240*350</div>
+        </div>
+        <div class="bottom">650*40</div>
+    </div>
+</div>
+<div class="footer">980*40</div>
+</body>
+</html>

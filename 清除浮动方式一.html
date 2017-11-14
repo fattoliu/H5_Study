@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动方式一</title>
+    <style>
+        /*代码摘自 YUI CSS RESET*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0
+        }
+        .box1 {
+            background-color: red;
+            /*height:40px;*/
+        }
+        .box2 {
+            background-color: green;
+            /*clear:both;
+            margin-top: 30px;*/
+        }
+        .box1 p {
+            width: 100px ;
+            background-color: blue;
+        }
+
+        .box2 p {
+            width: 100px;
+            background-color: yellow;
+        }
+        
+        p {
+            float: left;
+        }
+        .wall {
+            clear: both;
+        }
+        .h20 {
+            height: 20px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+
+<!--清除方式一：设置前一个盒子设置高度
+    清除方式二：给后面的盒子添加 clear 属性,但是 margin 属性无效
+    clear 属性值：
+                none: 默认取值，按照浮动元素的排序规则来排序（左浮动找左浮动，右浮动找右浮动）
+                left: 不要找前面的左浮动元素
+                right: 不要找前面的右浮动元素
+                both: 不要找前面的左浮动元素和右浮动元素 （使用最多）
+     清除方式三：隔墙法：
+                    外墙法：在两个盒子中间添加一个额外的块级元素，然后给块级元素设置 clear：both 属性
+                        外墙法可以让第二个盒子使用 margin-top 属性，但是第一个盒子使用 margin-bottom 属性无效，因此一般不设置第一个或
+                        第二个盒子的 margin 属性，只要设置额外加进去的盒子的高度就行
+
+                    内墙法：在第一个盒子的所有子元素最后面添加一个额外的块级元素，然后给块级元素设置 clear：both 属性
+                        内墙法可以让第二个盒子使用 margin-top 属性，也可以让第一个盒子使用 margin-bottom 属性，也可以设置额外添加的
+                        盒子的高度
+
+                外墙法不能撑起第一个盒子的高度，内墙法可以
+
+                无论外墙法还是内墙法，都需要额外添加一个块级元素，因此代码阅读性不强，不推荐使用隔墙法来清除浮动
+
+-->
+
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+</div>
+<div class="wall h20"></div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

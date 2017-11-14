@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D 转换模块-正方体</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 400px;
+            height: 400px;
+            margin: 200px auto;
+            position: relative;
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform-style: preserve-3d;
+
+            animation: rotate_anim 5s ease 0s infinite alternate;
+        }
+
+        ul li {
+            list-style: none;
+            width: 400px;
+            height: 400px;
+            font-size: 60px;
+            text-align: center;
+            color: rgba(82, 82, 82, 0.66);
+            line-height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+
+        ul li:nth-child(1) {
+            background-color: rgba(255, 160, 122, 0.66);
+            transform: translate(-200px) rotateY(90deg);
+        }
+
+        ul li:nth-child(2) {
+            background-color: rgba(135, 206, 250, 0.65);
+            transform: translateZ(200px);
+        }
+
+        ul li:nth-child(3) {
+            background-color: rgba(255, 255, 224, 0.65);
+            transform: translate(200px) rotateY(90deg);
+        }
+
+        ul li:nth-child(4) {
+            background-color: rgba(144, 238, 144, 0.65);
+            transform: translateZ(-200px);
+
+        }
+
+        ul li:nth-child(5) {
+            background-color: rgba(255, 192, 203, 0.65);
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        ul li:nth-child(6) {
+            background-color: rgba(147, 112, 219, 0.66);
+            transform: rotateX(90deg) translateZ(-200px);
+        }
+
+        @keyframes rotate_anim {
+            from {
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateY(180deg) rotateX(35deg) rotateZ(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+</body>
+</html>

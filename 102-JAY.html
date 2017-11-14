@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D 播放器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url("images/jay/bg_jay.jpg") no-repeat;
+            /*该属性可将背景图片沾满网页*/
+            background-size: cover;
+            /*加了 overflow 属性，当爱心 bottom 为负数或 left 超出网页宽度时，就不会有滚动条*/
+            overflow: hidden;
+        }
+
+        ul {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: 90px;
+            left: 50%;
+            margin-left: -75px;
+            transform-style: preserve-3d;
+            animation: sport 20s linear 0s infinite normal;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        ul:hover  li img {
+            opacity: 0.5;
+
+        }
+
+        ul li:hover img {
+            opacity: 1;
+        }
+
+        ul li {
+            width: 150px;
+            height: 150px;
+            list-style: none;
+            font-size: 60px;
+            text-align: center;
+            line-height: 150px;
+            position: absolute;
+            background-color: black;
+            left: 0;
+            top: 0;
+        }
+
+        ul li:nth-child(1) {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        ul li:nth-child(2) {
+            transform: rotateY(60deg) translateZ(150px);
+
+        }
+
+        ul li:nth-child(3) {
+            transform: rotateY(120deg) translateZ(150px);
+
+        }
+
+        ul li:nth-child(4) {
+            transform: rotateY(180deg) translateZ(150px);
+
+        }
+
+        ul li:nth-child(5) {
+            transform: rotateY(240deg) translateZ(150px);
+
+        }
+
+        ul li:nth-child(6) {
+            transform: rotateY(300deg) translateZ(150px);
+
+        }
+
+        ul li img {
+            width: 150px;
+            height: 150px;
+            box-sizing: border-box;
+            border: 5px solid lightyellow;
+            box-shadow: 0 0 10px lightgoldenrodyellow;
+        }
+        .heart, .top_heart, .right_heart {
+            width: 126px;
+            height: 177px;
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+            animation: heart_move 30s linear 0s infinite normal;
+        }
+
+        .top_heart {
+            animation: top_heart_move 40s ease 0s infinite normal;
+
+        }
+
+        .right_heart {
+            animation: right_heart_move 40s linear 0s infinite normal;
+
+        }
+        @keyframes sport {
+            /*
+                注意点：
+
+                    1.动画中如果有和默认样式中同名的属性，会覆盖默认样式中同名的属性
+                    2.编写动画时，固定不变的值写在前面，需要变化的值写在后面
+            */
+            from {
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(-10deg) rotateY(-360deg);
+
+            }
+        }
+
+        @keyframes heart_move {
+            0% {
+                left: 100px;
+                bottom: 100px;
+                opacity: 1;
+            }
+
+            20% {
+                left: 200px;
+                bottom: 400px;
+                opacity: 0;
+            }
+            40% {
+                left: 800px;
+                bottom: 800px;
+                opacity: 1;
+            }
+            60% {
+                left: 1200px;
+                bottom: 700px;
+                opacity: 0;
+            }
+
+            80% {
+                left: 1600px;
+                bottom: 400px;
+                opacity: 1;
+            }
+            100% {
+                left: 1000px;
+                bottom: -200px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes top_heart_move {
+            0% {
+                left: 5%;
+                top: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                top: 900px;
+                opacity: 0;
+            }
+        }
+        @keyframes right_heart_move {
+            0% {
+                left: 100%;
+                top: 60px;
+                opacity: 1;
+            }
+
+            100% {
+                left: 8%;
+                top: 1000px;
+                opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/jay/1jay.jpg" alt=""></li>
+    <li><img src="images/jay/2ftx.jpg" alt=""></li>
+    <li><img src="images/jay/3bdkj.jpg" alt=""></li>
+    <li><img src="images/jay/4yhm.jpg" alt=""></li>
+    <li><img src="images/jay/5qlx.jpg" alt=""></li>
+    <li><img src="images/jay/6syydxb.jpg" alt=""></li>
+</ul>
+
+<img src="images/love.png" alt="" class="heart">
+<img src="images/love.png" alt="" class="top_heart">
+<img src="images/love.png" alt="" class="right_heart">
+<audio src="music/乱舞春秋.mp3" controls="controls"></audio>
+</body>
+</html>

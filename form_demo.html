@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单 demo</title>
+</head>
+<body>
+    <h3>表单 demo</h3>
+    <form action="http://www.baidu.com">
+        <!--利用 label 标签for 属性和 input 标签 id 属性进行绑定，点击 username时，就可以聚焦 username输入框-->
+        <label for="user_name">username:</label>
+        <input type="text" name="username" id="user_name">
+        <br>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <input type="submit" value="立即注册">
+    </form>
+    
+    <br>
+    <br>
+    <br>
+    <hr>
+    
+    <h3>datalist 待选项 demo</h3>
+    <input type="text" list="cars">
+    <datalist id="cars">
+        <option value="宝马"></option>
+        <option value="奔驰"></option>
+        <option value="铃木"></option>
+        <option value="本田"></option>
+        <option value="现代"></option>
+        <option value="保时捷"></option>
+        <option value="奔奔"></option>
+    </datalist>
+    <input type="color">
+</body>
+</html>

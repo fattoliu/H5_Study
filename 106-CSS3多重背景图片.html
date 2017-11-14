@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3多重背景图片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 1000px;
+            height: 800px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            /*多张背景图片之间，用逗号隔开，先添加的背景会覆盖后添加的背景图片
+                建议在编写多重背景是，拆开来写
+            */
+            /*
+                        background: url("images/bg_test.png") no-repeat left top, url("images/jay1.jpg") no-repeat right top;
+            */
+            background-image: url("images/animal1.png"), url("images/animal2.png"), url("images/animal3.png"),
+            url("images/animal4.png"), url("images/animal5.png");
+            background-repeat: no-repeat, no-repeat,no-repeat,no-repeat,no-repeat;
+            background-position: left top, right top,left bottom, right bottom,center, center;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

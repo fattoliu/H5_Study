@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index 属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: red;
+            position: relative;
+
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .box2 {
+            background-color: green;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            z-index: 2;
+
+        }
+
+        .box3 {
+            background-color: blue;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    默认情况下，所有的元素都有一个默认的 z-index 属性，取值是0
+    z-index 属性的作用是专门用于控制定位流元素的覆盖关系的
+
+    默认情况下，定位流的元素会盖住标准流的元素
+    默认情况下，定位流的元素后面编写的会盖住前面编写的
+    如果定位流的元素设置了 z-index 属性，那么谁的 z-index 属性比较大，谁就显示在上面
+
+
+    从父现象：
+        如果两个元素的父元素都没设置z-index 属性，那么谁的 z-index 属性比较大谁就显示在上面
+        如果两个元素的父元素设置了 z-index 属性，那么子元素的 z-index 属性就会失效，也就是谁，谁的父元素的 z-index 属性比较大谁
+        就会显示在上面
+
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

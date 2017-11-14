@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D转换模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+
+        ul li {
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        ul li:nth-child(2) {
+            /*deg 是单位，代表旋转角度*/
+            transform: rotate(45deg);
+        }
+
+        ul li:nth-child(3) {
+            /*第一个参数为x 轴偏移，第二个参数为 y 轴偏移*/
+            transform: translate(100px, 0px);
+        }
+        ul li:nth-child(4) {
+            /*第一个参数为x轴放大倍数，第二个参数为 y 轴放大倍数
+              如果水平和垂直放大倍数都一样，可以简写成scale(0.5)*/
+            transform: scale(1.5, 0.5);
+        }
+        ul li:nth-child(5) {
+            /*2D 转换模块会修改元素的坐标系，旋转之后再平移，是在旋转之后的坐标系再进行平移*/
+            transform: rotate(45deg) translate(100px, 0px) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>正常的</li>
+    <li>旋转的</li>
+    <li>平移的</li>
+    <li>缩放的</li>
+    <li>综合的</li>
+</ul>
+</body>
+</html>

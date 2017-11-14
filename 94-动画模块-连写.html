@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块-连写</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            animation: move 3s linear 2s 5 normal;
+        }
+
+        @keyframes move {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+    1. 动画模块连写格式
+    animation:动画名称 动画时长  动画运动速度  延迟时间  执行次数 往返动画；
+    简写格式：
+         animation:动画名称 动画时长
+
+-->
+</body>
+<div></div>
+</html>

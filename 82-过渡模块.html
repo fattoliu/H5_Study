@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            !*告诉系统哪个属性需要执行过渡效果*!
+            transition-property: width,height,background-color;
+            !*告诉系统过渡效果持续的时长*!
+            transition-duration: 0.5s,2s,0.5s;
+        }
+        div:hover {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }*/
+        ul {
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+
+        ul li {
+            list-style: none;
+            width: 500px;
+            font-size: 12px;
+            height: 50px;
+            margin-top: 50px;
+            background-color: skyblue;
+            /*transition-property: margin-left;
+            transition-duration: 0.5s;*/
+            /*transition: margin-left,background-color 0.5s,1s ease-in-out 0s;*/
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+       /* ul li:nth-child(1) {
+            !*告诉系统过渡动画的运动的速度*!
+            transition-timing-function: linear;
+        }
+
+        ul li:nth-child(2) {
+            transition-timing-function: ease;
+
+        }
+
+        ul li:nth-child(3) {
+            transition-timing-function: ease-in;
+
+        }
+
+        ul li:nth-child(4) {
+            transition-timing-function: ease-out;
+
+        }
+
+        ul li:nth-child(5) {
+            transition-timing-function: ease-in-out;
+
+        }*/
+
+        ul:hover li {
+            margin-left: 500px;
+            background-color: lemonchiffon;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    过渡三要素
+        必须要有属性发生变化
+        必须告诉系统哪个属性需要执行过渡效果
+        必须告诉系统过渡效果持续的时长
+        多个属性用逗号隔开
+
+
+    过渡连写格式：
+                    transition: margin-left 0.5s linear 0s;
+                    transition：过渡属性 过渡时长  运动速度  延迟时间
+
+     如果多个属性运动的速度/延迟时间/持续时间都一样，那么可以简写成：
+                    transition: all 时长;
+
+-->
+<!--<div></div>-->
+
+<ul>
+    <li>linear 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</li>
+    <li>ease 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</li>
+    <li>ease-in 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</li>
+    <li>ease-out 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</li>
+    <li>ease-in-out 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</li>
+</ul>
+</body>
+</html>

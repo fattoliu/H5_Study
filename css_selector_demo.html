@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 选择器 demo</title>
+    <style type="text/css">
+
+        /*标签选择器*/
+        p {
+            color: orange;
+        }
+
+        /*id 选择器*/
+        #this_is_id_selector {
+            color: blue;
+        }
+
+        /*class 选择器*/
+        .this_is_class_selector {
+            color: red;
+        }
+
+        /*后代选择器*/
+        div p {
+            color: pink;
+        }
+
+        .this_is_child_class #this_is_div_p_id {
+            color: aqua;
+        }
+
+        /*子元素选择器*/
+        div > p {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+<p id="this_is_id_selector">我是段落--展示 id 选择器</p>
+<div id="this_is_child_id" class="this_is_child_class">
+    <p id="this_is_div_p_id">我是段落--展示 后代 选择器</p>
+    <p>我是段落--展示 后代 选择器</p>
+    <p>我是段落--展示 后代 选择器</p>
+    <ul>
+        <li>
+            <p> 我是段落--展示 后代 选择器</p>
+        </li>
+    </ul>
+</div>
+<p class="this_is_class_selector">我是段落--展示 class 选择器</p>
+
+
+</body>
+</html>

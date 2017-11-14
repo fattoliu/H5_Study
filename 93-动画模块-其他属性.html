@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块-其他属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /*1. 告诉系统需要执行哪个动画，名称值随意定*/
+            animation-name: sport;
+            /*3. 告诉系统动画持续的时长*/
+            animation-duration: 2s;
+
+            /*其他属性*/
+            /*animation-delay: 2s;*//*延迟属性*/
+            animation-timing-function: linear;/*动画速度曲线*/
+            animation-iteration-count: 2;/*循环次数*/
+            /*是否往返：
+                    normal 默认行为，执行完一次之后，回到起点继续执行下一次 ；
+                    alternate 往返动画，执行完一次之后往回执行下一次，如果值为 alternate，那么一次往返算两次动画*/
+            animation-direction: alternate;
+            /*
+                动画状态：
+                    running：执行，默认值
+                    paused: 暂停
+            */
+            /*animation-play-state: running;*/
+        }
+        @keyframes sport {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: 500px;
+            }
+        }
+        div:hover {
+            animation-play-state: paused;
+
+        }
+
+        span {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<div></div>
+<span></span>
+</body>
+</html>

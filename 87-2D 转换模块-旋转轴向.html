@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D 转换模块-旋转轴向</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            /*透视属性，近大远小
+              属性值为透视距离
+
+              透视属性必须添加到需要呈现近大远小效果的元素的父元素上面
+            */
+            perspective: 500px;
+        }
+
+        ul li {
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid #000;
+        }
+
+        ul li img {
+            width: 200px;
+            height: 200px;
+        }
+
+        ul li:nth-child(1) img {
+            /*默认情况下所有元素都是围绕 Z 轴旋转的*/
+            transform: rotateZ(45deg);
+        }
+
+        ul li:nth-child(2) img {
+            transform: rotateX(45deg);
+        }
+
+        ul li:nth-child(3) img {
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+<ul>
+    <!--
+                                                ^ Y 轴
+                                                |
+                                                |
+                                                |
+                                                |
+                                                O - - - - - -> X 轴
+                                               /
+                                              /
+                                             /
+                                            /
+                                           L  Z 轴
+
+    -->
+    <li><img src="images/rotateZ.jpg" alt=""></li>
+    <li><img src="images/rotateX.jpg" alt=""></li>
+    <li><img src="images/rotateY.jpg" alt=""></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css三大特性之优先级---权重</title>
+
+    <!--
+        优先级：
+            id > 类 > 标签 > 通配符 > 浏览器默认
+
+        优先级的权重：
+        作用：当多个选择器混合使用时，可以通过计算权重来判断哪个优先级最高
+
+        计算规则：
+            首先计算选择器中有多少个 id， id 多的选择器优先级最高
+            如果 id 个数一样，就看类名的个数，类名个数多的优先级最高
+    -->
+
+    <style type="text/css">
+
+        #identity1 .box2 {
+            color: red;
+        }
+
+        .box1 .box2 {
+            color: green;
+        }
+
+        div ul li p {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<div id="identity1" class="box1">
+    <ul>
+        <li>
+            <p id="identity2" class="box2">我是段落</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空默认边距、行高和字号</title>
+    <style>
+        /*利用通配符选择器，设置所有标签的 margin 和 padding 为 0 */
+        /*
+                * {
+                    margin:0;
+                    padding:0;
+                }
+        */
+        /*代码摘自 YUI CSS RESET*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0
+        }
+
+        p {
+            width: 610px;
+            height: 110px;
+            border: 1px solid #000;
+            background-color: #cdcdcd;
+            font-family: "黑体";
+            line-height: 40px;
+            /*顶部的内边距并不是边框到文字顶部的距离，而是边框到行高顶部的距离*/
+            padding-top:10px;
+            font-size: 20px;
+            color: #67676D;
+            padding-left:10px;
+            /*一般情况下，会以左边的内边距为基准，不会以右边的内边距为基准，因为右边距有误差，产生误差的原因是由于如果右边不够放下一个
+            文字，文字就会换行显示，所以文字和内边距之间的距离就有了误差*/
+            padding-right:10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    为了更好的控制盒子的位置和计算盒子的宽高等等，编写代码之前，第一件事情应该要清空默认的边距
+
+    如何清空默认的边距？
+    * {
+        margin:0;
+        padding:0;
+    }
+    但是由于通配符选择器会遍历当前页面中的所有标签，所以性能不好，所以不建议使用，应用：
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+-->
+
+<p>葬爱：非主流文化的常用词，是当今网络流行术语.且流行于非主流杀马特之中。葬，即埋葬，爱，即爱情，翻译成外语就是bury love</p>
+</body>
+</html>

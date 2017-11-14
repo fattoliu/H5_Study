@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动元素的脱标准（脱离标准流）</title>
+    <style>
+        /*代码摘自 YUI CSS RESET*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0
+        }
+        .box1 {
+            width:100px;
+            height:100px;
+            background-color: red;
+            float: left;
+        }
+        .box2 {
+            width:150px;
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+    浮动元素的脱标：
+        当某一个元素浮动之后，这个元素看上去就像被从标准流中删除了一样，这个就是浮动元素的脱标
+
+    如果前面一个元素设置浮动，而后面一个没有设置，那么这时前面的一个元素就会盖住后面的一个元素
+-->
+
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

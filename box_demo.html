@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        .big {
+            background-color:red;
+            height: 500px;
+            width:500px;
+            border:5px solid black;
+        }
+        /*如果两个盒子是嵌套关系，那么设置了里面一个盒子的顶部的外边距，外面的盒子也会被定下来，如果不想被定下来，可以给外面的盒子加上
+        边框属性
+
+        一般情况下，如果需要控制嵌套关系盒子之间的距离，应该首先考虑 padding，其次考虑 margin，因为 margin 本质上是用于控制兄弟关系
+        之间的间隙的
+
+
+        在嵌套关系的盒子中，可以利用 margin:0 auto;的方式让里面的盒子在外面的盒子水平居中，且只对水平方向有效
+        */
+        .small {
+            width:200px;
+            height:200px;
+            background-color: blue;
+            /*margin: 150px;*/
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+     <div class="big">
+
+         <div class="small"></div>
+     </div>
+</body>
+</html>

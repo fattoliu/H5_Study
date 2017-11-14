@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 书写格式</title>
+    <!--
+        第二种样式：内嵌样式
+                    可以在一对 head 标签当中写上一对 style 标签，然后在 style 标签中编写 css 代码-->
+    <style>
+        .div2 {
+            color: green;
+        }
+    </style>
+
+    <!--
+        第三种方式：外链样式-----------------------使用最广泛！！！！！！
+                    单独新建一个.css 文件，把 css 代码写到这个文件中，通过 link 标签把这个文件和.html 文件关联起来
+            -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+
+    <!--
+        第四种方式：导入样式
+            单独新建一个.css 文件，把 css 代码写到这个文件中，通过@import把这个文件和.html 文件关联起来-->
+    <style>
+        @import "css/mystyle2.css";
+    </style>
+
+
+    <!--外链样式和导入样式的区别：
+            1.外链样式是通过 link 标签关联的，而导入样式是通过@import 关联的，@import 是 CSS2.1推出的，所以有兼容性问题
+            2.外链样式在显示界面的时候，会先加载 CSS 样式，再加载界面结构，所以用户看到界面时一定已经设置了样式，而导入样式在显示
+            界面时，会先加载界面结构，再加载样式，用户看到界面的时候不一定已经设置了样式-->
+
+</head>
+<body>
+<!--
+    第一种方式：行内样式
+                直接写在标签中-->
+    <div style="color: red"> 我是 div</div>
+    <div class="div2"> 我是 div2</div>
+    <div class="div3"> 我是 div3</div>
+    <div class="div4"> 我是 div4</div>
+</body>
+</html>
