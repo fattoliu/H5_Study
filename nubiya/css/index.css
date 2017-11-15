@@ -1,0 +1,644 @@
+/*顶部区域*/
+.top {
+    width: 100%;
+    height: 55px;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.top_in {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.top .top_left {
+    float: left;
+    height: 100%;
+    width: 190px;
+}
+
+.top .top_left > h1 {
+    width: 100%;
+    height: 100%;
+}
+
+.top_logo {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/nubia-logo.png");
+}
+
+.top .top_right {
+    float: right;
+    height: 100%;
+    width: 740px;
+}
+
+.top .top_nav {
+    float: left;
+    width: 550px;
+    height: 100%;
+}
+
+.top .top_nav > li {
+    float: left;
+}
+
+.home, .shopping_mall, .product, .apps, .service, .experience_center, .forum {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    line-height: 55px;
+    margin-left: 40px;
+}
+
+/*鼠标移到文字上会变色*/
+.top ul > li > a:hover {
+    color: #e82c07;
+}
+
+.top .top_menu {
+    float: right;
+    width: 150px;
+    height: 100%;
+    /*background-color: khaki;*/
+}
+
+.top .top_menu > li {
+    float: right;
+    line-height: 55px;
+    margin-left: 10px;
+
+}
+
+.top .top_menu > li > a {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.top .top_menu > li:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    background: url("../images/nubia-syb-all.png");
+    margin-top: 12.5px;
+}
+
+/*--------------------------------------------------- 顶部 css 结束 ---------------------------------------------------*/
+
+/*广告区域*/
+.banner {
+    width: 100%;
+    height: 860px;
+}
+
+.banner .banner_hot_container {
+    width: 100%;
+    height: 120px;
+    padding-top: 55px;
+    background-color: white;
+    /*margin: 0 auto;*/
+    /*绝对定位不能用 margin:0 auto; 需要使用 left:50%   margin-left: -元素宽度一半*/
+    position: absolute;
+    /*由于此处已经设置了定位流，后面的 figure 也设置了定位流，所以会被覆盖，因此此处设置 z-index属性*/
+    z-index: 998;
+
+}
+
+.banner .banner_hot {
+    width: 1200px;
+    height: 120px;
+    margin: 0 auto;
+
+}
+
+.banner .banner_hot > ul {
+    width: 100%;
+    height: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+    box-sizing: border-box;
+
+}
+
+.banner .banner_hot > ul > li {
+    width: 150px;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+
+/*鼠标经过手机时，显示下方导航条*/
+.banner .banner_hot > ul > li:hover {
+    border-bottom: 2px solid red;
+    box-sizing: border-box;
+}
+
+.banner .banner_hot > ul > li img {
+    width: 120px;
+    margin-top: 15px;
+    height: 80px;
+}
+
+.banner .banner_hot > ul > li p {
+    color: #666;
+}
+
+#new_version {
+    color: red;
+}
+
+.banner .banner_figure {
+    width: 100%;
+    height: 600px;
+    background-color: red;
+    text-align: center;
+    /*使超出屏幕宽度的图片隐藏掉，防止出现水平滚动条*/
+    overflow: hidden;
+    position: relative;
+}
+
+/*当图片宽度大于了父元素的宽度时，不能使用 margin:0 auto; 或者 父元素中添加 text-align:center;使图片居中
+  此情况下，使图片居中的方法有：
+
+    1.定位流：
+            position: absolute;
+            left:50%;
+            margin-left:-图片宽度的一半
+      此方法弊端：
+                1.需要写三行代码
+                2.必须知道图片宽度
+
+    2.margin:0 -100%;
+        注意点：父元素必须设置text-align:center;
+*/
+.banner .banner_figure .banner_img {
+    height: 100%;
+    margin: 0 -100%;
+
+}
+
+/*定位流默认以 body 作为参考点，所以要子绝父相(此处即.banner_figure 要设置成相对定位流)*/
+.banner .banner_figure > ol {
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    bottom: 10px;
+}
+
+.banner .banner_figure > ol > li {
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    margin-left: 15px;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+}
+
+.banner .banner_figure > ol > li:hover {
+    border-color: red;
+    background: transparent;
+    transform: scale(1.2, 1.2);
+
+}
+
+.banner .banner_video {
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.banner .banner_video > ul {
+    width: 100%;
+    height: 100%;
+    /*伸缩布局*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .banner_video > ul > li {
+    width: 396px;
+    height: 250px;
+    float: left;
+    /*margin-right: 3px;*/
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+.banner .banner_video > ul > li > img {
+    height: 100%;
+    margin: 0 -100%;
+}
+
+.banner .banner_video .video_info {
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    bottom: 0;
+    opacity: 0; /*作用：设置元素透明度，0完全透明。特点：子元素也会跟着透明*/
+}
+
+/* .banner .banner_video>ul>li:hover img 如果>号改成空格 则会导致播放按钮也变灰*/
+.banner .banner_video > ul > li:hover > img {
+    opacity: 0.5;
+}
+
+.banner .banner_video > ul > li:hover .video_info {
+    opacity: 1;
+}
+
+.banner .banner_video > ul > li:hover .video_info > img {
+    animation: pm-popup-ant 2s .5s ease-in-out infinite;
+}
+
+.banner .banner_video .video_info > h3 {
+    font-size: 16px;
+    color: white;
+    line-height: 40px;
+}
+
+.banner .banner_video .video_info > p {
+    color: white;
+}
+
+@keyframes pm-popup-ant {
+    20% {
+        transform: scale(.8);
+
+    }
+
+    40% {
+        transform: scale(1.2);
+
+    }
+
+    60% {
+        transform: scale(.9);
+
+    }
+
+    80% {
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/*--------------------------------------------------- 广告 css 结束 ---------------------------------------------------*/
+
+/*内容区域*/
+.content {
+    width: 100%;
+    height: 1883px;
+}
+
+.content > dl {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content > dl > dt {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.content > dl > dt > h3 {
+    font-size: 35px;
+    color: #333;
+}
+
+.content > dl > dt > p {
+    margin-top: 20px;
+    color: #e8340e;
+}
+
+.content .content_phone {
+    width: 1200px;
+    height: 1200px;
+}
+
+.content .content_phone > li {
+    float: left;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .content_phone > li:nth-child(1) {
+    width: 1200px;
+    height: 395px;
+    margin-bottom: 10px;
+}
+
+.content .content_phone > li:nth-child(2) {
+    width: 395px;
+    height: 795px;
+    margin-right: 10px;
+}
+
+.content .content_phone > li:nth-child(3) {
+    width: 795px;
+    height: 390px;
+    margin-bottom: 10px;
+}
+
+.content .content_phone > li:nth-child(4) {
+    width: 390px;
+    height: 395px;
+    margin-right: 10px;
+}
+
+.content .content_phone > li:nth-child(5) {
+    width: 395px;
+    height: 395px;
+}
+
+.content .content_phone > li > img {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.content .content_phone > li:nth-child(1) > img {
+    margin-top: 60px;
+}
+
+.content .content_phone .phone_des {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.content .content_phone .phone_des > h4 {
+    font-size: 20px;
+    color: #000;
+}
+
+.content .content_phone .phone_des > p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.content .content_phone .phone_des > span {
+    display: inline-block;
+    width: 108px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #000;
+}
+
+.content .content_phone > li:nth-child(1) .phone_des {
+    left: 0%;
+    margin-left: 860px;
+    bottom: 150px;
+}
+
+.content .content_phone > li:nth-child(1) img {
+    margin-left: -80px;
+}
+
+.content .content_phone > li:nth-child(3) img {
+    margin-left: 80px;
+}
+
+.content .content_phone > li:nth-child(1):hover img {
+    margin-left: 0;
+}
+
+.content .content_phone > li:nth-child(3):hover img {
+    margin-left: 0;
+}
+
+.content .content_phone > li:hover .img_scale {
+    transform: scale(1.1, 1.1);
+}
+
+.content .content_accessories {
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .content_accessories > li {
+    float: left;
+    width: 295px;
+    height: 300px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.content .content_accessories > li > img {
+    width: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.content .content_accessories > li > p {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.content .content_accessories > li:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+/*--------------------------------------------------- 内容 css 结束 ---------------------------------------------------*/
+
+/*底部区域*/
+.footer {
+    width: 100%;
+    height: 396px;
+    position: relative;
+}
+
+.footer .footer_container {
+    width: 1200px;
+    height: 356px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -600px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.footer .footer_container .footer_search {
+    width: 100%;
+    height: 50px;
+}
+
+.footer .footer_container .footer_search > img {
+    width: 14px;
+    height: 14px;
+}
+
+.footer .footer_container .footer_search > span {
+    line-height: 50px;
+}
+
+.footer .footer_container .footer_productlist {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.footer .footer_container .footer_productlist > dl {
+    width: 200px;
+    float: left;
+}
+
+.footer .footer_container .footer_productlist > dl > dt {
+    color: #000;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer .footer_container .footer_productlist > dl > dd > a {
+    color: #999;
+    line-height: 20px;
+}
+
+.footer .footer_container .footer_productlist > dl > dd > a:hover {
+    color: red;
+}
+
+.footer .footer_container .footer_info {
+    width: 100%;
+    height: 30px;
+}
+
+.footer .footer_container .footer_info .footer_contact {
+    background-color: lightseagreen;
+}
+
+.footer .footer_container .footer_info .footer_contact > li {
+    float: left;
+    list-style: none;
+}
+
+.footer .footer_container .footer_info .footer_contact > li > a {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 30px;
+    color: #999999;
+}
+
+.footer .footer_container .footer_info .footer_contact > li:nth-child(1) a {
+    margin-left: 0;
+}
+
+.footer .footer_container .footer_info .footer_contact > li > a:hover {
+    color: #000;
+}
+
+.footer .footer_container .footer_info .footer_support {
+    width: 160px;
+    height: 30px;
+    float: left;
+    margin-left: 50px;
+}
+
+.footer .footer_container .footer_info .footer_support > li {
+    width: 30px;
+    height: 100%;
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+}
+
+.footer .footer_container .footer_info .footer_support > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(1) > a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -246px 0;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(2) > a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -186px 0;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(3) > a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -126px 0;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(4) > a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -156px 0;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(1):hover a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -246px -30px;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(2):hover a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -186px -30px;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(3):hover a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -126px -30px;
+}
+
+.footer .footer_container .footer_info .footer_support > li:nth-child(4):hover a {
+    background: url("../images/nubia-syb-all.png") no-repeat;
+    background-position: -156px -30px;
+}
+
+.footer .footer_container .footer_info > h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer .footer_container .footer_copyright {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 10px;
+}
+
+.footer .footer_container .footer_copyright > a {
+    text-decoration: none;
+    color: #999;
+}
+
+.footer .footer_container .footer_copyright > img {
+    width: 10px;
+    margin-right: 2px;
+    margin-left: 6px;
+}
+
