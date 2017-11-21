@@ -27,3 +27,25 @@ function insertAfter(newElement, targetElement) {
         parent.insertBefore(newElement, targetElement.nextSibling);
     }
 }
+
+/*获取下一个元素节点*/
+function getNextElement(node) {
+    // 如果是元素节点，直接返回
+    if (node.nodeType == 1) {
+        return node;
+    }
+    // 如果有下一个节点，就递归
+    if (node.nextSibling) {
+        return getNextElement(node.nextSibling);
+    }
+    return null;
+}
+
+/*为元素添加 class 属性，追加属性，而非替换*/
+function addClass(element, value) {
+    if(!element.className) {
+        element.className = value;
+    } else {
+        element.className += " " + value;
+    }
+}

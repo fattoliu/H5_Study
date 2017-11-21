@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+    <link rel="stylesheet" href="css/09-itinerary.css">
+    <link rel="stylesheet" href="css/09-stripeTables.css">
+</head>
+<!--利用 DOM 脚本设置样式
+
+在这类场合中，需要决定是采用纯粹的 CSS 来解决，还是利用 DOM来设置样式，需要考虑以下因素：
+   1.这个问题最简单的解决方案是什么；
+   2.那种解决方案会得到更多浏览器的支持。
+
+如果想改变某个元素的呈现效果，使用 CSS；
+如果想改变某个元素的行为，使用 DOM；
+-->
+<body>
+<table>
+    <caption>Itinerary</caption>
+    <thead>
+    <tr>
+        <th>When</th>
+        <th>Where</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>June 9th</td>
+        <td>Portland, <abbr title="Oregon">OR</abbr></td>
+    </tr>
+    <tr>
+        <td>June 10th</td>
+        <td>Seattle, <abbr title="Washington">WA</abbr></td>
+    </tr>
+    <tr>
+        <td>June 12th</td>
+        <td>Scaramento, <abbr title="California">CA</abbr></td>
+    </tr>
+    </tbody>
+</table>
+<script src="js/00-base.js"></script>
+<script src="js/09-stripeTables.js"></script>
+<script src="js/08-displayAbbreviations.js"></script>
+<script src="js/09-highlightRows.js"></script>
+
+</body>
+</html>
