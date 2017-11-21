@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explaining the Document Object Model</title>
+    <link rel="stylesheet" href="css/08-typography.css">
+
+</head>
+<body>
+<ul id="navigation">
+    <li><a href="http://www.baidu.com" accesskey="1">百度</a></li>
+    <li><a href="http://www.taobao.com" accesskey="4">淘宝</a></li>
+    <li><a href="http://www.qq.com" accesskey="9">腾讯</a></li>
+</ul>
+<h1>What is the Document Object Model ?</h1>
+<p>
+    The <abbr title="World Wide Web Consortium"> W3C</abbr> defines
+    the <abbr title="Document of Object Model">DOM</abbr> as:
+</p>
+<blockquote cite="http://www.w3.org/DOM/">
+    <p>
+        A platform- and language-neutral interface that will allow programs
+        and scripts to dynamically access and update the
+        content, structure and style of documents.
+    </p>
+</blockquote>
+<p>
+    It is an <abbr title="Application Programming Interface">API</abbr>
+    that can be used to navigate <abbr title="HyperText Markup Language">
+    HTML</abbr> and <abbr title="eXtensible Markup Language">XML</abbr> documents.
+</p>
+<!--
+    accesskey = "1" 对应着一个“返回到本网站主页”的链接;
+    accesskey = "2" 对应着一个“回退到前一个页面”的链接;
+    accesskey = "4" 对应着一个“打开本网站的搜索表单/页面”的链接;
+    accesskey = "9" 对应着一个“本网站联系办法”的链接;
+    accesskey = "0" 对应着一个“查看本网站的快捷键清单”的链接;
+-->
+
+<script src="js/00-base.js"></script>
+<script src="js/08-displayAbbreviations.js"></script>
+<script src="js/08-displayCitations.js"></script>
+<script src="js/08-displayAccessKeys.js"></script>
+
+</body>
+</html>
