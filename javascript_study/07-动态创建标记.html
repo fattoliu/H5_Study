@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--动态创建标记：
+            传统方法：document.wirte 和 innerHTML
+            document.write 缺点：
+                        违背了“行为应该与表现分离”的原则
+                        MIME 类型 application/xhtml+xml 与 document.write 不兼容，浏览器在呈现这种 XHTML 文档时不会执行 document.write
+            innerHTML:
+                该属性可以用来读、写某给定元素里的 HTML 内容。
+                利用这个技术无法区分“插入一段 HTML 内容”和“替换一段 HTML 内容”
+               ，一旦使用 innerHTML 属性，它的内容全部都将被替换。
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>动态创建标记</title>
+    <style>
+        #testdom {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="testdiv">
+    <p>this is original content.</p>
+</div>
+
+<!--使用 dom 方法添加元素步骤：
+    1.创建新的元素
+    2.把这个新元素插入节点树。
+-->
+<div id="testdom"></div>
+
+<script src="js/07-example.js"></script>
+<script>
+    document.write("<p>This is inserted by document.write.</p>")
+</script>
+</body>
+</html>
