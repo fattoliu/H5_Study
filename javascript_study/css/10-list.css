@@ -1,0 +1,19 @@
+body {
+    background-color: skyblue;
+}
+
+ol {
+    margin: 0;
+    padding: 20px;
+}
+
+#slideshow {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+#preview {
+    position: absolute;
+}

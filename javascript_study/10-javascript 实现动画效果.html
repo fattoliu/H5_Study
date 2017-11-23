@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 实现动画效果</title>
+</head>
+<!--动画基础知识：
+        1.位置
+            网页元素在浏览器窗口里的位置是一种标示性的信息。通常有 CSS 负责设置
+
+        2.时间
+            JavaScript 函数 setTimeout 能够让某个函数在经历一段预定的时间之后才开始执行。这个函数带有两个参数
+            第一个参数：字符串类型，为执行的函数名称
+            第二个参数：时间，单位：毫秒
+            setTimeout("function",interval);
+            绝大多是时候，会把该函数调用赋值给一个变量：
+            variable = setTimeout("function",interval);
+
+            如果想取消某个正在排队等待执行的函数，就必须事先把 setTimeout 函数的返回值赋值给一个变量。
+            clearTimeout(variable);
+
+        3.时间增量
+-->
+<body>
+    <p id="message">Whee!</p>
+    <p id="message2">Whoa!</p>
+
+    <script src="js/00-base.js"></script>
+    <script src="js/10-positionMessage.js"></script>
+    <script src="js/10-moveMessage.js"></script>
+</body>
+</html>
