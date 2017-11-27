@@ -57,6 +57,9 @@ article img {
 #imagegallery a {
     background-color: transparent;
 }
+#imagegallery li {
+    display: inline;
+}
 
 header nav a.here:link,
 header nav a.here:visited,
@@ -64,4 +67,21 @@ header nav a.here:hover,
 header nav a.here:active {
     color:#eef;
     background-color: #799;
+}
+
+th {
+    color: #edc;
+    background-color: #455;
+}
+tr td {
+    color: #223;
+    background-color: #eb6;
+}
+tr.odd td {
+    color:#223;
+    background-color: #ec8;
+}
+tr.highlight td {
+    color: #223;
+    background-color: #cba;
 }
